@@ -114,10 +114,12 @@ func deobfuscateLog4J(input string) string {
 	for {
 		aidx := strings.LastIndex(input, "$")
 
-		if aidx > 1 {
+		if aidx > 0 {
 			bidx := strings.Index(input[aidx:], "}")
 			if bidx > 0 {
 				input = input[:aidx] + input[aidx+bidx-1:aidx+bidx] + input[aidx+bidx+1:]
+			} else {
+				break
 			}
 		} else if aidx == 0 && len(input) > 3 {
 			input = input[2 : len(input)-1]
