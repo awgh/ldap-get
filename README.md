@@ -6,6 +6,6 @@ Includes deobfuscator for common Log4J URL obfuscation techniques.
 
 This utility is in Go, so it can't accidentally your remote Java class.  
 
-However remember this is probably live malware, so be careful not to run it later.  
+However be careful not to run it later.  
 
 Maybe never install Java on *anything ever*.
